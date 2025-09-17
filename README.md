@@ -1128,6 +1128,13 @@ pre-commit install
 
 **欢迎联系我们洽谈合作！**
 
+### 📱 微信联系方式
+
+<div align="center">
+  <img src="data/verification/cn.png" width="200" alt="商务合作微信二维码" />
+  <p><em>扫描二维码添加微信，洽谈商务合作</em></p>
+</div>
+
 ---
 
 ## 📄 开源协议
