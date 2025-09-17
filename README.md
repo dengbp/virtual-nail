@@ -395,13 +395,13 @@ nail_sdxl_inpaint_purecolor.py
 
 ## 📊 训练数据流向图
 
-<img width="500" height="600" alt="美甲训练数据流向图" src="https://github.com/user-attachments/assets/c9579c02-2274-492c-8396-c6f58184c261" />
+<img width="500" height="800" alt="美甲训练数据流向图" src="https://github.com/user-attachments/assets/c9579c02-2274-492c-8396-c6f58184c261" />
 
 
 
 ## 🎯 核心处理数据流向图
 
-<img width="500" height="600" alt="美甲核心处理数据流向图" src="https://github.com/user-attachments/assets/985f68dc-676a-42a2-b3d9-1e3fe8f620b7" />
+<img width="500" height="800" alt="美甲核心处理数据流向图" src="https://github.com/user-attachments/assets/985f68dc-676a-42a2-b3d9-1e3fe8f620b7" />
 
 
 ## 🔧 技术栈详解
