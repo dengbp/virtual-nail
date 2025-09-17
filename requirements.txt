@@ -1,0 +1,36 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# Web server dependencies
+flask>=3.0.0
+requests>=2.31.0
+
+# Image processing
+scikit-image>=0.21.0
+
+# Utilities
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+
+# AI/ML dependencies
+diffusers==0.21.4
+transformers==4.35.2
+accelerate==0.24.1
+safetensors==0.4.0
+controlnet_aux==0.0.6
+compel==2.0.1
+huggingface_hub==0.19.4
+
+# Segmentation dependencies
+groundingdino-py==0.4.0
+segment-anything==1.0
+supervision==0.6.0
+
+# Additional utilities
+loguru==0.7.2
+colorama==0.4.6
+tensorboard==2.14.1 
