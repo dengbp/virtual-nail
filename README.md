@@ -231,7 +231,6 @@ nail-color-preview/
 │
 └── 📦 配置文件
     ├── requirements.txt                     # Python依赖
-    ├── config.py                           # 系统配置
     └── logging_config.py                   # 日志配置
 ```
 
@@ -552,22 +551,6 @@ LEARNING_RATE = 1e-4
 IMAGE_SIZE = 1024  # 长边尺寸
 ```
 
-#### 训练参数调优
-```python
-# train_u2net_pytorch.py 关键参数
-class UltraRobustNailSegmentationDataset:
-    def __init__(self, max_size=1024, is_train=True):
-        self.max_size = max_size  # 1024长边
-        
-        # 数据增强策略
-        self.transform = A.Compose([
-            A.LongestMaxSize(max_size=1024),
-            A.RandomRotate90(p=0.5),
-            A.HorizontalFlip(p=0.5),
-            A.ShiftScaleRotate(p=0.7),
-            # ... 更多增强
-        ])
-```
 
 
 ### 模型评估
@@ -587,17 +570,11 @@ python test_model_load.py
 ### 本地部署
 
 ```bash
-# 使用Gunicorn部署
-pip install gunicorn
+# 直接启动美甲AI服务器
+python editor_image_server.py
 
-# 启动服务器
-gunicorn -w 4 -b 0.0.0.0:80 --timeout 300 editor_image_server:app
-
-# 配置文件
-config.py:
-    DEBUG = False
-    PORT = 80
-    WORKERS = 4
+# 服务器将在 http://localhost:80 启动
+# 可通过浏览器或API客户端访问服务
 ```
 
 ### 云平台部署
