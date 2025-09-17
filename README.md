@@ -173,7 +173,7 @@ System基于AI的美甲虚拟试戴系统 - 集成U²-Net分割、像素级颜�
 ## 🏗️ 系统架构
 
 ### 三阶段处理流水线
-<img width="3840" height="3077" alt="美甲系统架构 _ Mermaid Chart-2025-09-17-061820" src="https://github.com/user-attachments/assets/9f9060b0-f2ad-47a2-bdd4-9818954c5c37" />
+<img width="600" alt="美甲系统架构流程图" src="https://github.com/user-attachments/assets/9f9060b0-f2ad-47a2-bdd4-9818954c5c37" />
 
 ### 技术创新点
 
@@ -395,17 +395,17 @@ nail_sdxl_inpaint_purecolor.py
 
 ## 📊 训练数据流向图
 
-<img width="914" height="3839" alt="美甲训练数据流向图 _ Mermaid Chart-2025-09-17-062349" src="https://github.com/user-attachments/assets/c9579c02-2274-492c-8396-c6f58184c261" />
+<img width="500" alt="美甲训练数据流向图" src="https://github.com/user-attachments/assets/c9579c02-2274-492c-8396-c6f58184c261" />
 
 
 ## 🔄 数据预处理流程图
 
-<img width="2751" height="3840" alt="美甲数据预处理流程图 _ Mermaid Chart-2025-09-17-062500" src="https://github.com/user-attachments/assets/5fa0e4f7-4552-457f-9644-35402e4e2748" />
+<img width="500" alt="美甲数据预处理流程图" src="https://github.com/user-attachments/assets/5fa0e4f7-4552-457f-9644-35402e4e2748" />
 
 
 ## 🎯 核心处理数据流向图
 
-<img width="898" height="3840" alt="美甲核心处理数据流向图 _ Mermaid Chart-2025-09-17-062628" src="https://github.com/user-attachments/assets/985f68dc-676a-42a2-b3d9-1e3fe8f620b7" />
+<img width="500" alt="美甲核心处理数据流向图" src="https://github.com/user-attachments/assets/985f68dc-676a-42a2-b3d9-1e3fe8f620b7" />
 
 
 ## 🔧 技术栈详解
