@@ -4,70 +4,91 @@ System基于AI的美甲虚拟试戴系统 - 集成U²-Net分割、像素级颜�
 
 ## 🌟 效果展示
 
-### 🎯 最终效果对比
-
-<table>
-  <tr>
-    <td align="center"><strong>原始图像</strong></td>
-    <td align="center"><strong>参考颜色</strong></td>
-    <td align="center"><strong>AI生成结果</strong></td>
-  </tr>
-  <tr>
-    <td><img src="assets/demo/original_1.jpg" width="200" alt="原始手部图像"></td>
-    <td><img src="assets/demo/reference_1.jpg" width="200" alt="参考美甲颜色"></td>
-    <td><img src="assets/demo/result_1.jpg" width="200" alt="AI生成的美甲效果"></td>
-  </tr>
-  <tr>
-    <td><img src="assets/demo/original_2.jpg" width="200" alt="原始手部图像2"></td>
-    <td><img src="assets/demo/reference_2.jpg" width="200" alt="参考美甲颜色2"></td>
-    <td><img src="assets/demo/result_2.jpg" width="200" alt="AI生成的美甲效果2"></td>
-  </tr>
-  <tr>
-    <td><img src="assets/demo/original_3.jpg" width="200" alt="原始手部图像3"></td>
-    <td><img src="assets/demo/reference_3.jpg" width="200" alt="参考美甲颜色3"></td>
-    <td><img src="assets/demo/result_3.jpg" width="200" alt="AI生成的美甲效果3"></td>
-  </tr>
-</table>
-
-### 🔄 处理流程可视化
+### 💅 产品常规效果图
 
 <div align="center">
-  <img src="assets/demo/process_pipeline.gif" width="600" alt="三阶段处理流程动画" />
-  <p><em>从左到右：U²-Net分割 → 像素级颜色迁移 → 物理高光渲染 → SDXL AI增强</em></p>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="data/产品常规效果图/2623972fdc1c1567e6cdf25adf7d4fa2.JPG" width="180" alt="美甲效果图1" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/3b98f9a6735ee1723574f37be555b2ea.JPG" width="180" alt="美甲效果图2" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/473e5b33eadd99338de65d83d59d419f.JPG" width="180" alt="美甲效果图3" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/685c7a11bb16e20c3a68f762fab8db9f.JPG" width="180" alt="美甲效果图4" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="data/产品常规效果图/8ecf1799dd43a49a21296b7b3f435488.JPG" width="180" alt="美甲效果图5" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/a566b30aaa08d360f9ff6518682b4d72.JPG" width="180" alt="美甲效果图6" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/b07f0a85dda7ac1548ace782d5ea2cbf.JPG" width="180" alt="美甲效果图7" />
+      </td>
+      <td align="center">
+        <img src="data/产品常规效果图/d302eaf0e5d6202d608eb7e9573e094a.JPG" width="180" alt="美甲效果图8" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+        <img src="data/产品常规效果图/e9b1ba1895154a1a9033cd2a4dbe7662.JPG" width="180" alt="美甲效果图9" />
+      </td>
+      <td align="center" colspan="2">
+        <img src="data/产品常规效果图/fc12e78b4e95c1807d585b05e470764b.JPG" width="180" alt="美甲效果图10" />
+      </td>
+    </tr>
+  </table>
+  <p><em>展示多种美甲颜色和风格的AI生成效果，色彩饱满，质感逼真</em></p>
 </div>
 
-### ✨ 核心技术亮点
-
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <img src="assets/demo/segmentation.png" width="150" alt="精准分割" />
-      <br><strong>🎯 精准分割</strong>
-      <br>U²-Net深度学习<br>IoU > 0.92
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/demo/color_transfer.png" width="150" alt="颜色迁移" />
-      <br><strong>🎨 颜色迁移</strong>
-      <br>TPS变形算法<br>像素级精确
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/demo/lighting.png" width="150" alt="物理光照" />
-      <br><strong>💡 物理光照</strong>
-      <br>Phong模型<br>逼真高光渲染
-    </td>
-    <td align="center" width="25%">
-      <img src="assets/demo/ai_enhance.png" width="150" alt="AI增强" />
-      <br><strong>🤖 AI增强</strong>
-      <br>SDXL深度优化<br>专业级质感
-    </td>
-  </tr>
-</table>
-
-### 📱 应用场景
+### 🎨 广告宣传效果图
 
 <div align="center">
-  <img src="assets/demo/use_cases.png" width="700" alt="应用场景展示" />
-  <p><em>美甲店预览 • 电商试戴 • 移动APP • 创意设计</em></p>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="data/广告宣传效果图/1e0b3f5a4d76e2a656df918b561e545a.JPG" width="300" alt="广告宣传图1" />
+        <br><em>专业级美甲展示效果</em>
+      </td>
+      <td align="center">
+        <img src="data/广告宣传效果图/IMG_1525.jpg" width="300" alt="广告宣传图2" />
+        <br><em>创意美甲设计展示</em>
+      </td>
+    </tr>
+  </table>
+  <p><em>高品质的宣传展示图，突出美甲艺术的精致与美感</em></p>
+</div>
+
+### ✨ 技术特色
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="25%">
+        <strong>🎯 精准分割</strong>
+        <br>U²-Net深度学习<br>IoU > 0.92
+      </td>
+      <td align="center" width="25%">
+        <strong>🎨 颜色迁移</strong>
+        <br>TPS变形算法<br>像素级精确
+      </td>
+      <td align="center" width="25%">
+        <strong>💡 物理光照</strong>
+        <br>Phong模型<br>逼真高光渲染
+      </td>
+      <td align="center" width="25%">
+        <strong>🤖 AI增强</strong>
+        <br>SDXL深度优化<br>专业级质感
+      </td>
+    </tr>
+  </table>
 </div>
 
 ## 📖 项目概述
