@@ -1016,17 +1016,17 @@ pre-commit install
 
 ## 📞 联系方式
 
-- **项目主页**: https://github.com/your-username/nail-color-preview
-- **问题反馈**: https://github.com/your-username/nail-color-preview/issues
-- **功能建议**: https://github.com/your-username/nail-color-preview/discussions
-- **邮箱**: your-email@example.com
+- **项目主页**: https://github.com/dengbp/virtual-nail
+- **问题反馈**: https://github.com/dengbp/virtual-nail/issues
+- **功能建议**: https://github.com/dengbp/virtual-nail/discussions
+- **邮箱**: dengbangpang@gmail.com
 
 ## 📊 项目统计
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/nail-color-preview)
-![GitHub forks](https://img.shields.io/github/forks/your-username/nail-color-preview)
-![GitHub issues](https://img.shields.io/github/issues/your-username/nail-color-preview)
-![GitHub license](https://img.shields.io/github/license/your-username/nail-color-preview)
+![GitHub stars](https://img.shields.io/github/stars/dengbp/virtual-nail)
+![GitHub forks](https://img.shields.io/github/forks/dengbp/virtual-nail)
+![GitHub issues](https://img.shields.io/github/issues/dengbp/virtual-nail)
+![GitHub license](https://img.shields.io/github/license/dengbp/virtual-nail)
 
 ---
 
