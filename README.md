@@ -750,35 +750,6 @@ watch -n 1 nvidia-smi
 
 ## 🤝 贡献指南
 
-### 开发规范
-
-#### 代码风格
-```python
-# 使用Black代码格式化
-pip install black
-black . --line-length 88
-
-# 使用flake8代码检查
-pip install flake8
-flake8 . --max-line-length 88
-
-# 类型提示
-from typing import Optional, List, Tuple
-def process_image(img: np.ndarray) -> Optional[np.ndarray]:
-    pass
-```
-
-#### 提交规范
-```bash
-# 提交信息格式
-<type>(<scope>): <description>
-
-# 示例
-feat(api): 添加进度查询接口
-fix(training): 修复U2Net训练内存泄漏
-docs(readme): 更新安装指南
-test(highlight): 添加高光渲染测试
-```
 
 ### 贡献流程
 
