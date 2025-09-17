@@ -1,0 +1,112 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large model files (if any)
+*.pth
+*.ckpt
+*.safetensors
+models/*.pth
+models/**/*.safetensors
+models/**/*.ckpt
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Output directories
+output/
+results/
+temp/
+tmp/
+
+# API keys and secrets
+config_secret.py
+.env.local
+*.key
+
+# Large data files
+*.zip
+*.tar.gz
+*.rar
+
+# Stable Diffusion WebUI
+stable-diffusion-webui/models/
+stable-diffusion-webui/outputs/
+stable-diffusion-webui/log/
+stable-diffusion-webui/cache/
