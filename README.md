@@ -167,7 +167,6 @@ System基于AI的美甲虚拟试戴系统 - 集成U²-Net分割、像素级颜�
 
 ### 🔧 开发友好
 - **完整工具链**: 从数据标注到模型训练的全流程工具
-- **丰富测试**: 覆盖API、算法、性能的完整测试体系
 - **详细文档**: 包含API、训练、部署的完整技术文档
 - **模块化设计**: 高内聚低耦合，便于二次开发
 
@@ -210,15 +209,6 @@ nail-color-preview/
 │   ├── validate_labelme_data.py            # 标注数据验证
 │   ├── quick_start_labelme.py              # 快速标注工具
 │   └── generate_initial_masks.py           # 初始掩码生成
-│
-├── 🧪 测试套件
-│   ├── test_progress_api.py                # API接口测试
-│   ├── test_api_data_url.py                # API格式验证
-│   ├── test_color_transfer_pixel_level_pipeline.py # 完整流水线测试
-│   ├── test_antialiased_highlight.py       # 高光渲染测试
-│   ├── test_nail_sdxl_inpaint_opencv.py    # SDXL AI测试
-│   ├── test_highlight_detection.py         # 高光检测测试
-│   └── test_gray_mask_pipeline.py          # 灰度掩码测试
 │
 ├── 🎨 高级渲染模块
 │   ├── physical_lighting_system.py         # 物理光照系统
@@ -304,7 +294,7 @@ python system_info.py
 mkdir -p data/{test_images,test_masks,reference,output/final,output/debug}
 ```
 
-### 快速测试
+### 启动服务
 
 #### 启动API服务
 ```bash
@@ -312,25 +302,6 @@ mkdir -p data/{test_images,test_masks,reference,output/final,output/debug}
 python editor_image_server.py
 
 # 服务器将在 http://0.0.0.0:80 启动
-```
-
-#### 运行API测试
-```bash
-# 在另一个终端运行测试
-python test_progress_api.py
-python test_api_data_url.py
-```
-
-#### 测试完整流水线
-```bash
-# 测试三阶段处理流程
-python test_color_transfer_pixel_level_pipeline.py
-
-# 测试高光渲染
-python test_antialiased_highlight.py
-
-# 测试AI增强
-python test_nail_sdxl_inpaint_opencv.py
 ```
 
 ## 🎯 核心功能详解
@@ -421,30 +392,6 @@ color_transfer_pixel_level_refine_sdxl.py
 nail_sdxl_inpaint_purecolor.py
 ```
 
-## 🧪 测试文件映射表
-
-| 测试类型 | 测试脚本 | 对应核心模块 | 功能描述 | 优先级 |
-|---------|---------|-------------|---------|--------|
-| **🌐 API接口测试** |
-| API完整调用 | `test_progress_api.py` | `editor_image_server.py` | 完整API调用流程，包含任务提交、进度查询、结果获取 | ⭐⭐⭐⭐⭐ |
-| API格式验证 | `test_api_data_url.py` | `editor_image_server.py` | Data URL格式验证，base64编解码测试 | ⭐⭐⭐⭐ |
-| 参考图API | `test_reference_only_api.py` | `editor_image_server.py` | Reference-only模式API测试 | ⭐⭐⭐ |
-| **🎨 第一阶段：基础颜色迁移** |
-| 完整流水线 | `test_color_transfer_pixel_level_pipeline.py` | `color_transfer_pixel_level_transplant.py` | 像素级颜色迁移 + TPS变形 + 无缝融合 | ⭐⭐⭐⭐⭐ |
-| 颜色迁移质量 | `test_color_transfer.py` | `nail_color_transfer.py` | 颜色准确性评估，边缘融合质量测试 | ⭐⭐⭐⭐ |
-| 灰度掩码处理 | `test_gray_mask_pipeline.py` | `color_transfer_pixel_level_transplant.py` | 灰度掩码处理和颜色准确性验证 | ⭐⭐⭐ |
-| **✨ 第二阶段：物理光照渲染** |
-| 抗锯齿高光 | `test_antialiased_highlight.py` | `color_nail_highlight_fill.py` | 抗锯齿高光碎片处理，可视化对比 | ⭐⭐⭐⭐⭐ |
-| 高光检测 | `test_highlight_detection.py` | `color_nail_highlight_shader.py` | 自适应高光检测，光照参数优化 | ⭐⭐⭐⭐ |
-| 纯高光渲染 | `test_run_highlight_only.py` | `color_nail_highlight_fill.py` | 独立高光渲染模块测试 | ⭐⭐⭐ |
-| **🤖 第三阶段：AI深度优化** |
-| SDXL增强 | `test_nail_sdxl_inpaint_opencv.py` | `nail_sdxl_inpaint_opencv.py` | SDXL Inpainting + IP-Adapter + ControlNet | ⭐⭐⭐⭐⭐ |
-| AI参数优化 | `test_inference_steps.py` | `nail_sdxl_inpaint_purecolor.py` | 推理步数和参数优化测试 | ⭐⭐⭐ |
-| 进度回调 | `test_progress_callback.py` | `nail_sdxl_inpaint_purecolor.py` | AI生成进度监控和回调测试 | ⭐⭐ |
-| **🔄 综合集成测试** |
-| 主流水线 | `test_main_pipeline_no_template.py` | `color_nail_full_pipeline_adapter.py` | 无模板完整流水线测试 | ⭐⭐⭐⭐ |
-| 任务ID验证 | `test_task_id.py` | `editor_image_server.py` | 任务ID生成和追踪测试 | ⭐⭐ |
-| 大文件上传 | `test_large_file_upload.py` | `editor_image_server.py` | 大图像文件上传性能测试 | ⭐⭐ |
 
 ## 📊 训练数据流向图
 
@@ -554,62 +501,6 @@ if result["statusCode"] == 200:
 - **文件大小**: 支持最大100MB图像
 - **分辨率**: 最高支持1536px长边
 
-## 🧪 测试体系
-
-### API测试
-```bash
-# 基础API功能测试
-python test_progress_api.py
-
-# Data URL格式验证
-python test_api_data_url.py
-
-# 大文件上传测试
-python test_large_file_upload.py
-
-# 任务ID管理测试
-python test_task_id.py
-```
-
-### 算法模块测试
-```bash
-# 第一阶段：颜色迁移测试
-python test_color_transfer_pixel_level_pipeline.py
-python test_color_transfer.py
-
-# 第二阶段：高光渲染测试
-python test_antialiased_highlight.py
-python test_highlight_detection.py
-python test_run_highlight_only.py
-
-# 第三阶段：AI增强测试
-python test_nail_sdxl_inpaint_opencv.py
-python test_inference_steps.py
-python test_progress_callback.py
-```
-
-### 集成测试
-```bash
-# 完整流水线测试
-python test_main_pipeline_no_template.py
-
-# 灰度掩码处理测试
-python test_gray_mask_pipeline.py
-
-# 自动化测试套件
-./run_all_tests.sh
-```
-
-### 质量评估标准
-
-| 测试类型 | 评估指标 | 目标值 |
-|---------|---------|--------|
-| **API性能** | 响应时间 | < 60秒 |
-| **API稳定性** | 成功率 | > 95% |
-| **分割精度** | IoU | > 0.92 |
-| **颜色准确性** | 色差 | < 5% |
-| **边缘质量** | 平滑度 | 无明显锯齿 |
-| **AI生成** | 质感真实度 | 人工评估8/10 |
 
 ## 🎓 训练指南
 
@@ -710,24 +601,11 @@ python test_model_load.py
 
 ### 本地部署
 
-#### 开发环境
-```bash
-# 启动开发服务器
-python editor_image_server.py
-
-# 配置文件
-config.py:
-    DEBUG = True
-    PORT = 80
-    MAX_CONTENT_LENGTH = 100 * 1024 * 1024
-```
-
-#### 生产环境
 ```bash
 # 使用Gunicorn部署
 pip install gunicorn
 
-# 启动生产服务器
+# 启动服务器
 gunicorn -w 4 -b 0.0.0.0:80 --timeout 300 editor_image_server:app
 
 # 配置文件
@@ -735,54 +613,6 @@ config.py:
     DEBUG = False
     PORT = 80
     WORKERS = 4
-```
-
-### Docker部署
-
-#### Dockerfile
-```dockerfile
-FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
-
-WORKDIR /app
-
-# 安装系统依赖
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgomp1
-
-# 安装Python依赖
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-# 复制项目文件
-COPY . .
-
-# 下载模型
-RUN python download_models.py
-
-# 暴露端口
-EXPOSE 80
-
-# 启动命令
-CMD ["python", "editor_image_server.py"]
-```
-
-#### 构建和运行
-```bash
-# 构建镜像
-docker build -t nail-color-preview .
-
-# 运行容器
-docker run -d \
-    --name nail-preview \
-    --gpus all \
-    -p 80:80 \
-    -v $(pwd)/data:/app/data \
-    nail-color-preview
 ```
 
 ### 云平台部署
@@ -952,7 +782,7 @@ test(highlight): 添加高光渲染测试
 
 ### 贡献流程
 
-1. **Fork项目** → 2. **创建特性分支** → 3. **开发功能** → 4. **编写测试** → 5. **提交PR**
+1. **Fork项目** → 2. **创建特性分支** → 3. **开发功能** → 4. **提交PR**
 
 ```bash
 # 1. Fork后克隆
@@ -961,9 +791,8 @@ git clone https://github.com/your-username/nail-color-preview.git
 # 2. 创建分支
 git checkout -b feature/new-highlight-algorithm
 
-# 3. 开发并测试
+# 3. 开发功能
 # ... 开发代码 ...
-python test_new_feature.py
 
 # 4. 提交更改
 git add .
@@ -1015,7 +844,7 @@ pre-commit install
 
 | 配置 | GPU | 处理时间 | 内存使用 | 推荐场景 |
 |------|-----|---------|---------|----------|
-| **入门级** | GTX 1660 (6GB) | 90-120秒 | 12GB RAM | 开发测试 |
+| **入门级** | GTX 1660 (6GB) | 90-120秒 | 12GB RAM | 开发使用 |
 | **标准级** | RTX 3080 (10GB) | 45-60秒 | 16GB RAM | 小规模生产 |
 | **专业级** | RTX A5000 (24GB) | 30-45秒 | 32GB RAM | 大规模生产 |
 | **企业级** | RTX A6000 (48GB) | 20-30秒 | 64GB RAM | 高并发服务 |
@@ -1035,7 +864,7 @@ pre-commit install
 - [x] U²-Net指甲分割模型
 - [x] 三阶段处理流水线
 - [x] API服务接口
-- [x] 完整测试体系
+- [x] 完整技术文档
 - [x] Active Contour边缘优化
 - [x] SDXL AI增强集成
 
